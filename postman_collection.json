@@ -1,0 +1,93 @@
+{
+  "info": {
+    "name": "Express API Collection",
+    "description": "Collection for Express API endpoints",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Health Check",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/health",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "health"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Get All Examples",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/example",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "example"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Get Example by ID",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/example/1",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "example",
+            "1"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Create Example",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Example Item\"\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/api/example",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "example"
+          ]
+        }
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:3000"
+    }
+  ]
+}
